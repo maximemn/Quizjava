@@ -1,0 +1,300 @@
+
+.frst-line{
+	margin-top: 1em;
+}
+
+.fs-line{
+	margin-top: 0.5em;
+}
+
+.fs-line-error{
+	margin-top: 0em;
+}
+
+.fs-line-fld-cb{
+	position: relative;
+	height:32px;
+	line-height:32px;
+}
+
+.fs-msg {
+margin-top: 0.5em;
+position: relative;
+padding-left: 30px;
+height:30px;
+line-height:30px;
+}
+
+.fs-msg .text-error {
+	float:left;
+	height:25px;
+	line-height:15px;
+}
+
+.fs-line-lbl-cb{
+	text-align: right;
+	padding-top: .35em;
+	height:25px;
+}
+
+html.ie7 .fs-line {
+	display: inline-block;
+}
+
+.fs-line-fld-value {
+	padding-top: 0.4928em;
+}
+
+.fs-line-lbl-cb label, .fs-line-lbl-cb .fs-label{
+	padding: 0;
+	font-weight: normal;
+}
+
+.fs-line-lbl label.fs-mandatory-field:after {
+	color: rgb(153, 0, 0);
+	font-weight: bold;
+	z-index:99;
+}
+
+
+.fs-line-lbl label:after{
+	color: transparent;
+	z-index:99;
+}
+
+
+.ie_gt8 .forms .hasDatepicker {
+	width: 8.5em !important;
+}
+
+.ie_lt8 .forms .hasDatepicker {
+	width: 6.5em !important;
+}
+
+.js .hint-txt{
+	padding: 15px 20px;
+    position: absolute;
+    right: -222px;
+    top: 0;
+    width: 280px;
+    z-index: 790;
+}
+
+.js .hint-txt,
+.js .l-grid .hint-txt {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1.4em 1.3em;
+	margin:30px;
+	background:#FFF;
+    border: 1px solid #c8dded;
+    box-shadow: 0 0 5px #b7d8f0;
+	font-size: .9em;
+	color:#000;
+	outline: none;
+	position: absolute;
+	
+}
+
+
+.fs-backToEdit a,
+.forms .hint-icon-btn,
+.buttons .hint-icon-btn{
+	background: #ffffff url('/coecs/assets/toolbox/img/icons/has-btn-ico.gif') left bottom repeat-x;
+    border: 1px solid #373939;
+    border-left-color: #958b8b;
+    border-radius: 0;
+    border-top-color: #958b8b;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    line-height:normal;
+    margin: 0 .2em;
+    outline:none;
+    opacity: 1;
+    padding: .45em .7em;
+    position: relative;
+    text-decoration:none;
+}
+
+.forms .fs-backToEdit a:hover,
+.forms .fs-backToEdit a:focus,
+.forms .hint-icon-btn:hover, 
+.forms .hint-icon-btn:focus, 
+.forms .hint-icon-btn.has-focus{
+	background: #ebebeb url('/coecs/assets/toolbox/img/icons/has-btn-ico-hover.gif') left bottom repeat-x;
+    border: 1px solid #373939;
+    border-bottom-color: #958b8b;
+    border-right-color: #958b8b;
+    box-shadow: 0 0 8px #a1c0e0;	
+    color: #000000 !important;
+    outline:none !important;	
+    text-shadow: 0 0 4px #fff;
+}
+
+.disabled{
+	pointer-events: none;
+	color: #CCCCCC !important;
+}
+
+.js .confirm-txt{
+	padding: 15px 20px;
+    position: absolute;
+    right: -222px;
+    top: 0;
+    width: 400px;
+    z-index: 790;
+}
+
+.js .confirm-txt,
+.js .l-grid .confirm-txt {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1.4em 1.3em;
+	margin:60px;
+	background:#FFF;
+    border: 1px solid #c8dded;
+    box-shadow: 0 0 5px #b7d8f0;
+	font-size: 1.1em;
+	color:#000;
+	outline: none;
+	position: absolute;
+	
+}
+
+.confirm-txt {
+	font-size:0.9em;
+	padding-top:.3em;
+	clear:both;
+	color:#666;
+	display: none;
+}
+
+.no-js .confirm-txt{
+	display: block;
+	width: auto;
+	margin: 0;
+	color: #222222;
+}
+
+.js .confirm-txt,
+.js .l-grid .confirm-txt {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1.2em 1.8em;
+	margin:30px;
+	background:#FFF;
+    border: 1px solid #c8dded;
+    box-shadow: 0 0 5px #b7d8f0;
+	font-size: .9em;
+	color:#000;
+	outline: none;
+	position: absolute;
+	
+}
+.js h1 .confirm-txt,
+.js .l-grid h1 .confirm-txt {
+	font-size: .5em;
+	line-height: 1.25em
+}
+.js h2 .confirm-txt,
+.js .l-grid h2 .confirm-txt {
+	font-size: .55em;
+	line-height: 1.25em
+}
+.js h3 .confirm-txt,
+.js .l-grid h3 .confirm-txt {
+	font-size: .7em;
+	line-height: 1.3em
+}
+
+.js .confirm-txt .btn-close {
+	position:absolute;
+	top:0;
+	right:0;
+    height: 20px;
+    width: 20px;
+	font-size:.8em;
+	text-indent:-99999px;
+	border:none;
+	padding:0;
+	background:url('/coecs/assets/toolbox/img/icons/icons.png') -196px -52px no-repeat;
+}
+
+.js .confirm-txt .btn-ok {
+	position:absolute;
+	bottom:5px;
+	right:100px;
+    height: 27px;
+    width: 55px;
+	font-size:1em;
+	border:1;
+	padding:0;
+}
+
+.js .confirm-txt .btn-ko {
+	position:absolute;
+	bottom:5px;
+	right:40px;
+    height: 27px;
+    width: 55px;
+	font-size:1em;
+	border:1;
+	padding:0;
+}
+
+
+.forms label.fs-error-tab, .fs-error-tab label, .fs-error{
+    color: #990000;
+    font-style:italic;
+    font-weight: bold;
+}
+
+.forms select.fs-error{
+    background: #ffefef;
+    color: #990000;
+    border: 1px solid #990000;
+    box-shadow: 0 0 5px rgba(219,98,98,0.6);
+    outline: medium none;   
+}
+
+.forms select:focus.fs-error 
+ {
+    background: #fff;
+    color:#000;
+}
+
+.fs-backToEdit a,
+.forms .btn-inactive,
+.buttons .btn-inactive{
+    background: #ffffff url('/coecs/assets/toolbox/img/icons/has-btn-ico.gif') left bottom repeat-x;
+    border: 1px solid #373939;
+    border-left-color: #958b8b;
+    border-radius: 0;
+    border-top-color: #958b8b;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #c0c0c0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    line-height:normal;
+    margin: 0 .2em;
+    outline:none;
+    opacity: 1;
+    padding: .45em .7em;
+    position: relative;
+    text-decoration:none;
+};

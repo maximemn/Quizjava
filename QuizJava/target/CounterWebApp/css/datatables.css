@@ -1,0 +1,14 @@
+
+/* Selected rows */
+.dt > tbody > tr.is-selected { background:#eeeeee; }
+
+.private-space .dt > tbody > tr.is-selected { background-color:#eeeeee; }
+.pro-space .dt > tbody > tr.is-selected { background-color:#eeeeee; }
+
+.dt .dt-l-annule {
+     color:#c0c0c0;
+}
+
+.dt .dt-l-erreur {
+     color: #FF0000;
+}

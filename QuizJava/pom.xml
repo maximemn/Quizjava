@@ -1,0 +1,169 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>open.lu</groupId>
+  <artifactId>QuizJava</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Quiz Java</name>
+  
+  <developers>
+   <developer>
+   <id>Taha MANSOUR</id>
+   <email>t.mansour@open-group.lu</email>
+   <organization>Open PSF</organization>
+   <roles>
+    <role>Java Developer</role>
+   </roles>
+  </developer>
+ </developers>
+ 
+  <dependencies>
+    <!-- http://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-core</artifactId>
+	    <version>${version.struts2}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax</groupId>
+		<artifactId>javaee-api</artifactId>
+		<version>${version.javaee}</version>
+		<scope>provided</scope>
+	</dependency>	
+	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>${version.tiles}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-api</artifactId>
+		<version>${version.tiles}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-jsp</artifactId>
+		<version>${version.tiles}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-template</artifactId>
+		<version>${version.tiles-template}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-tiles-plugin</artifactId>
+		<version>${version.struts2}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>	
+	
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+
+<!-- Unit Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<!-- Spring Core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hsqldb</groupId>
+		    <artifactId>hsqldb</artifactId>
+		    <version>${hsqldb.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.struts</groupId>
+		    <artifactId>struts2-config-browser-plugin</artifactId>
+		    <version>${struts-browser-plugin.version}</version>
+		</dependency>		
+			
+  </dependencies>
+
+	<properties>
+		<jdk.version>1.7</jdk.version>
+		<version.struts2>2.3.16.3</version.struts2>
+		<version.javaee>6.0</version.javaee>
+		<version.tiles>2.0.6</version.tiles>
+		<version.tiles-template>2.2.0</version.tiles-template>
+		<spring.version>4.1.1.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
+		<log4j.version>1.2.16</log4j.version>
+		<junit.version>4.11</junit.version>
+		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+		<hsqldb.version>2.3.1</hsqldb.version>
+		<struts-browser-plugin.version>2.3.24</struts-browser-plugin.version>
+	</properties>
+	
+	<build>
+		<finalName>CounterWebApp</finalName>
+
+		<plugins>
+		    <!-- Eclipse project -->
+		  <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-eclipse-plugin</artifactId>
+			<version>2.9</version>
+			<configuration>
+			        <!-- Always download and attach dependencies source code -->
+				<downloadSources>true</downloadSources>
+				<downloadJavadocs>false</downloadJavadocs>
+				<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+				<wtpversion>2.0</wtpversion>
+			</configuration>
+		  </plugin>
+			
+		  <!-- Set JDK Compiler Level -->
+		  <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.3.2</version>
+			<configuration>
+				<source>${jdk.version}</source>
+				<target>${jdk.version}</target>
+			</configuration>
+		  </plugin>
+
+		  <!-- For Maven Tomcat Plugin -->
+		  <plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+			<configuration>
+				<path>/CounterWebApp</path>
+			</configuration>
+		  </plugin>
+
+		</plugins>
+
+	</build>	
+
+</project>
