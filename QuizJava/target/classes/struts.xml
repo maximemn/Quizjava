@@ -4,18 +4,35 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
- <constant name="struts.custom.i18n.resources" value="global"></constant>
- <constant name="struts.devMode" value="true" />
- 
- <package name="QuizJava" namespace="/" extends="struts-default">
-	<result-types>
-		<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
-	</result-types>
-	
-	<action name="home" class="lu.open.quiz.actions.HomeAction" method="execute">
-		<result name="SUCCESS" type="tiles">home</result>
-	</action>
+	<constant name="struts.custom.i18n.resources" value="global"></constant>
+	<constant name="struts.devMode" value="true" />
 
- </package>
+	<package name="QuizJava" namespace="/" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="home" class="lu.open.quiz.actions.HomeAction"
+			method="execute">
+			<result name="SUCCESS" type="tiles">acceuil</result>
+			<result name="START" type="redirectAction">
+				<param name="actionName">question</param>
+			</result>
+		</action>
+
+		<action name="question" class="lu.open.quiz.actions.QuestionnaireAction"
+			method="execute">
+			<interceptor-ref name="prepare" />
+			<result name="SUCCESS" type="tiles">question</result>
+			<result name="SUIVANT" type="redirectAction">
+				<param name="actionName">question</param>
+			</result>
+			<result name="PRECEDENT" type="redirectAction">
+				<param name="actionName">question</param>
+			</result>
+		</action>
+
+	</package>
 
 </struts>

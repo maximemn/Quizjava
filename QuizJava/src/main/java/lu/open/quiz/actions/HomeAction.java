@@ -25,6 +25,15 @@ public class HomeAction extends ActionSupport implements SessionAware, Preparabl
 	
 	protected Map<String, Object> sessionMap;
 
+	private String startTest;
+
+	public String getStartTest() {
+		return startTest;
+	}
+
+	public void setStartTest(String startTest) {
+		this.startTest = startTest;
+	}
 
 	@Override
 	public void prepare() throws Exception {
@@ -43,8 +52,11 @@ public class HomeAction extends ActionSupport implements SessionAware, Preparabl
 		  session.put("nomCandidat","Dupond");
 		  session.put("prenomCandidat","Michel");
 		  session.put("scoreCandidat",72.5);
-		
-		
+		  
+		  if(startTest!=null && !"".equals(startTest)){
+			  return "START";
+		  }
+		  
 		return "SUCCESS";
 	}
 	
