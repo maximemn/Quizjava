@@ -17,21 +17,23 @@
 			method="execute">
 			<result name="SUCCESS" type="tiles">acceuil</result>
 			<result name="START" type="redirectAction">
-				<param name="actionName">question</param>
+				<param name="actionName">nextQuestion</param>
 			</result>
 		</action>
 
-		<action name="question" class="lu.open.quiz.actions.QuestionnaireAction"
+		<action name="nextQuestion" class="lu.open.quiz.actions.NextQuestionAction"
 			method="execute">
 			<interceptor-ref name="prepare" />
 			<result name="SUCCESS" type="tiles">question</result>
-			<result name="SUIVANT" type="redirectAction">
-				<param name="actionName">question</param>
-			</result>
-			<result name="PRECEDENT" type="redirectAction">
-				<param name="actionName">question</param>
-			</result>
 		</action>
+		
+		<action name="previousQuestion" class="lu.open.quiz.actions.PreviousQuestionAction"
+			method="execute">
+			<interceptor-ref name="prepare" />
+			<result name="SUCCESS" type="tiles">question</result>
+		</action>
+		
+		
 
 	</package>
 
